@@ -15,14 +15,6 @@
       --white: #fff;
     }
 
-    [data-theme="dark"] {
-      --bg: #0f172a;
-      --text: #f8fafc;
-      --primary: #f8fafc;
-      --white: #1e293b;
-      --accent: #8b5cf6;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -163,29 +155,6 @@
       text-decoration: none;
     }
 
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--accent);
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      z-index: 999;
-    }
-
-    @media (max-width: 600px) {
-      .skills {
-        flex-direction: column;
-      }
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-
     .center {
       text-align: center;
       margin-top: 40px;
@@ -203,7 +172,6 @@
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleTheme()">Switch Theme</button>
 
   <div class="center">
     <h1>Rohit Bijwe</h1>
@@ -255,11 +223,24 @@
   </section>
 
   <section class="resume-download">
-    <a href="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/Rohit_bIjwe_Software_developer_cv.pdf" download>📄 Download Resume</a>
+    <a href="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/Rohit_bIjwe_Software_developer_cv.pdf.pdf" download>📄 Download Resume</a>
   </section>
 
   <section class="contact">
     <h3>Contact</h3>
     <p><i class="fas fa-envelope"></i><a href="mailto:bijwerohit9@gmail.com"> bijwerohit9@gmail.com</a></p>
     <p><i class="fas fa-phone"></i><a href="tel:+917066307511"> +91 7066307511</a></p>
-    <p><i class="fab fa-linkedin"></i><a href="https://
+    <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/rohitbijwe/">LinkedIn</a></p>
+    <p><i class="fab fa-github"></i><a href="https://github.com/Rohitbijwe9">GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rohit Bijwe</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/rohitbijwe/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Rohitbijwe9"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
