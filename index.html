@@ -2,50 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohit | Python/Django Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohit | Python & Django Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #6366f1;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --white: #fff;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #222;
-      color: #fff;
-      padding: 60px 20px;
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      color: var(--white);
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      font-weight: 600;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.3rem;
+      margin-top: 10px;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease;
     }
 
     h2 {
-      color: #333;
+      font-size: 2rem;
       margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
     ul {
@@ -53,29 +69,49 @@
       padding: 0;
     }
 
-    .project, .skill {
-      margin-bottom: 20px;
+    li::before {
+      content: "✔️ ";
+      color: var(--accent);
     }
 
-    .project a {
+    .project {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    a {
+      color: var(--accent);
       text-decoration: none;
-      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      background-color: #222;
-      color: #fff;
+      background-color: var(--primary);
+      color: var(--white);
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-      header p {
-        font-size: 1em;
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -84,47 +120,57 @@
 
   <header>
     <h1>Rohit Bijwe</h1>
-    <p>Python/Django Developer | REST API Specialist</p>
+    <p>🚀 Python/Django Developer | REST API  | Full-Stack Enthusiast</p>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
-    <p>I’m Rohit, a Python/Django Developer with 2+ years of experience building scalable, secure web applications and RESTful APIs. I focus on clean code, performance, and professional solutions that solve real-world problems.</p>
+    <p>I'm Rohit, a passionate and detail-oriented software developer with 2+ years of experience in building high-performance Django applications. I specialize in Python, Django REST Framework, and building full-stack apps with React. I believe in writing clean, scalable code that delivers business value and a seamless user experience.</p>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li class="skill">Python, Django, Django REST Framework</li>
-      <li class="skill">MySQL, PostgreSQL</li>
-      <li class="skill">React JS, HTML, CSS, JavaScript, Bootstrap</li>
-      <li class="skill">AWS S3/EC2, GitHub, Postman</li>
+      <li>⚙️ Python, Django, Django REST Framework</li>
+      <li>🛢️ MySQL, PostgreSQL</li>
+      <li>🎨 React JS, HTML, CSS, Bootstrap</li>
+      <li>☁️ AWS S3, EC2, GitHub, Postman</li>
+      <li>📐 MVT Architecture, Clean Code, API Design</li>
     </ul>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
+
     <div class="project">
-      <strong>Online Auction System with RSA</strong><br />
-      <small>Real-time secure bidding using Django & RSA encryption.</small><br />
-      <a href="https://github.com/Rohitbijwe9/auction-system">View on GitHub</a>
+      <h3>🔐 Online Auction System with RSA</h3>
+      <p>A secure online auction platform using Django & RSA encryption for bid protection and real-time bidding.</p>
+      <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">View on GitHub</a>
     </div>
+
     <div class="project">
-      <strong>Product Lead Management System</strong><br />
-      <small>Manage leads and products with full CRUD functionality using Django REST APIs.</small><br />
-      <a href="https://github.com/Rohitbijwe9/product-lead-management">View on GitHub</a>
+      <h3>📈 Product Lead Management System</h3>
+      <p>Manage leads, products, and generate reports. Built with Django REST API and MySQL backend.</p>
+      <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">View on GitHub</a>
     </div>
+
+    <div class="project">
+      <h3>🛒 E-commerce Cart System</h3>
+      <p>One-cart-per-user logic, Django signals, full CRUD, and secure cart operations with quantity management.</p>
+      <a href="https://github.com/Rohitbijwe9" target="_blank">View on GitHub</a>
+    </div>
+
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Rohitbijwe9" target="_blank">github.com/Rohitbijwe9</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-bijwe-913366324/" target="_blank">linkedin.com/in/rohit-bijwe-913366324</a></p>
+    <p>📧 Email: <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
+    <p>🐙 GitHub: <a href="https://github.com/Rohitbijwe9" target="_blank">github.com/Rohitbijwe9</a></p>
+    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/rohit-bijwe-913366324/" target="_blank">linkedin.com/in/rohit-bijwe</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Rohit Bijwe | Python/Django Developer</p>
+    <p>© 2025 Rohit Bijwe </p>
   </footer>
 
 </body>
