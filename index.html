@@ -22,7 +22,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
@@ -30,92 +30,55 @@
     header {
       background: linear-gradient(135deg, #6366f1, #3b82f6);
       color: var(--white);
-      padding: 60px 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 8px;
+      font-size: 2.5rem;
     }
 
     .profile {
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 40px 20px;
       background: var(--white);
       margin-top: -30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 900px;
-      margin-inline: auto;
-      gap: 30px;
     }
 
     .profile img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid var(--accent);
     }
 
-    .info h2 {
-      color: var(--accent);
-      font-size: 1.8rem;
+    .info {
+      margin-left: 20px;
+      max-width: 500px;
     }
 
-    .info p {
-      font-size: 1rem;
-      margin-top: 10px;
+    .info h2 {
+      color: var(--accent);
     }
 
     section {
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
     }
 
     h3 {
       color: var(--accent);
-      margin-bottom: 15px;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     ul {
       list-style-type: none;
-      padding: 0;
-    }
-
-    ul li::before {
-      content: "✔️";
-      margin-right: 8px;
-      color: var(--accent);
-    }
-
-    .project {
-      background: var(--white);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-    }
-
-    .project h4 {
-      font-size: 1.2rem;
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 8px;
-      color: var(--accent);
-      text-decoration: none;
+      margin-top: 10px;
     }
 
     .contact p {
@@ -125,7 +88,7 @@
     footer {
       text-align: center;
       padding: 30px 20px;
-      background-color: var(--primary);
+      background: var(--primary);
       color: var(--white);
     }
 
@@ -134,10 +97,6 @@
         flex-direction: column;
         text-align: center;
       }
-
-      .info h2 {
-        font-size: 1.5rem;
-      }
     }
   </style>
 </head>
@@ -145,14 +104,14 @@
 
   <header>
     <h1>Rohit Bijwe</h1>
-    <p>Python/Django Developer | Freelancer | API Expert</p>
+    <p>Python/Django Developer | API Expert</p>
   </header>
 
   <div class="profile">
     <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/0001.jpg" alt="Rohit Bijwe">
     <div class="info">
-      <h2>Hello 👋</h2>
-      <p>I’m Rohit, a freelance Python/Django developer with over 2 years of experience. I specialize in backend development, REST APIs, and full-stack solutions. Let’s build something awesome together.</p>
+      <h2>Hello! 👋</h2>
+      <p>I’m a Python/Django developer with 2+ years of experience in backend development. I build scalable web applications and APIs. Let's create something great!</p>
     </div>
   </div>
 
@@ -161,35 +120,28 @@
     <ul>
       <li>Python, Django, DRF</li>
       <li>MySQL, PostgreSQL</li>
-      <li>HTML, CSS, React JS</li>
-      <li>AWS S3, EC2, Git, Postman</li>
+      <li>React JS, HTML, CSS</li>
+      <li>AWS, Git, Postman</li>
     </ul>
   </section>
 
   <section>
-    <h3>Projects</h3>
-
+    <h3>Featured Projects</h3>
     <div class="project">
       <h4>Online Auction System with RSA</h4>
-      <p>Secure bidding platform with Django + RSA encryption.</p>
+      <p>Secure bidding platform using Django and RSA encryption.</p>
       <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">GitHub →</a>
     </div>
 
     <div class="project">
       <h4>Product Lead Management</h4>
-      <p>Lead & product management system with reports.</p>
+      <p>Manage products and leads, with real-time reporting.</p>
       <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">GitHub →</a>
-    </div>
-
-    <div class="project">
-      <h4>E-commerce Cart System</h4>
-      <p>Cart per user, Django signals, quantity update logic.</p>
-      <a href="https://github.com/Rohitbijwe9" target="_blank">GitHub →</a>
     </div>
   </section>
 
   <section class="contact">
-    <h3>Contact Me</h3>
+    <h3>Contact</h3>
     <p>📧 <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
     <p>📞 <a href="tel:+917066307511">+91 7066307511</a></p>
     <p>💼 <a href="https://linkedin.com/in/rohit-bijwe-913366324/" target="_blank">LinkedIn</a></p>
@@ -198,7 +150,7 @@
 
   <footer>
     <p>Looking for freelance gigs or full-time roles</p>
-    <p>© 2025 Rohit Bijwe </p>
+    <p>© 2025 Rohit Bijwe</p>
   </footer>
 
 </body>
