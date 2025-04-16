@@ -12,25 +12,25 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
 
+        /* Hero Section */
         .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             background-color: #007bff;
             color: white;
-            padding: 50px;
+            height: 100vh;
             text-align: center;
+            padding: 20px;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .profile-image {
+        .hero img {
             width: 200px;
-            height: auto;
+            height: 200px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
@@ -49,20 +49,39 @@
             background-color: #003d7a;
         }
 
+        /* About Section */
         .about, .projects, .contact {
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 50px 20px;
             text-align: center;
+        }
+
+        .about {
             background-color: white;
+            margin-top: 50px;
             border-radius: 10px;
-            margin-top: 30px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .about h2, .projects h2, .contact h2 {
+        .projects {
+            background-color: #f9f9f9;
+            margin-top: 30px;
+        }
+
+        .contact {
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
             font-size: 36px;
             margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .skills-list {
@@ -125,28 +144,25 @@
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content">
-        <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/rohit.jpg" alt="Rohit Bijwe" class="profile-image"/>
-        <h1>Hi, I’m Rohit Bijwe</h1>
-        <p>Experienced Python/Django Developer | API Specialist | Passionate about building scalable solutions</p>
-        <p>Helping businesses grow by creating robust and scalable web applications.</p>
-        <a href="#contact" class="cta-button">Let's Connect</a>
-    </div>
+    <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/rohit.jpg" alt="Rohit Bijwe" />
+    <h1>Hi, I'm Rohit Bijwe</h1>
+    <p>Python/Django Developer | API Specialist | Building Scalable Web Applications</p>
+    <a href="#contact" class="cta-button">Let's Connect</a>
 </section>
 
 <!-- About Me Section -->
 <section class="about" id="about">
     <h2>About Me</h2>
-    <p>I'm a dedicated and detail-oriented software developer with over 2 years of experience in building secure and scalable web applications. I specialize in **Python**, **Django**, and **Django REST Framework**, and I have a passion for solving real-world problems through clean and efficient code. Throughout my career, I've developed and maintained APIs, optimized performance, and contributed to highly impactful projects.</p>
+    <p>I am a passionate Python/Django developer with over 2 years of experience in building scalable, secure, and high-performance web applications. I specialize in designing and developing APIs, optimizing application performance, and working on end-to-end web development solutions. I enjoy solving real-world challenges through clean and maintainable code.</p>
 
     <h3>Key Skills</h3>
     <ul class="skills-list">
-        <li>Python & Django Development</li>
-        <li>RESTful API Design</li>
-        <li>Database Management (MySQL, PostgreSQL)</li>
-        <li>Cloud Services (AWS EC2, S3)</li>
-        <li>Front-End Development (HTML, CSS, React.js)</li>
-        <li>Version Control with Git & GitHub</li>
+        <li>Python, Django, Django REST Framework</li>
+        <li>RESTful API Development</li>
+        <li>MySQL & PostgreSQL</li>
+        <li>Version Control: Git & GitHub</li>
+        <li>Cloud Services: AWS (EC2, S3)</li>
+        <li>Front-End Development (React.js, HTML, CSS)</li>
         <li>Agile Methodologies & Continuous Improvement</li>
     </ul>
 </section>
@@ -154,13 +170,15 @@
 <!-- Projects Section -->
 <section class="projects" id="projects">
     <h2>Projects</h2>
+
     <div class="project-card">
         <img src="https://via.placeholder.com/150" alt="Project Image" />
         <h3>Online Auction System</h3>
-        <p>A secure and scalable auction system built with Django and RSA Cryptography for safe transactions and real-time bidding.</p>
+        <p>Secure auction platform with RSA Cryptography for safe transactions and real-time bidding. Built with Django.</p>
         <a href="https://github.com/Rohitbijwe9/auction-system" class="project-link">View Project</a>
     </div>
-    <!-- Add more projects here -->
+
+    <!-- Add more project cards as needed -->
 </section>
 
 <!-- Contact Section -->
