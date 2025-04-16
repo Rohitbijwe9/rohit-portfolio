@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rohit Bijwe | Python/Django Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
   <style>
     :root {
       --primary: #0f172a;
@@ -12,6 +13,8 @@
       --bg: #f8fafc;
       --text: #1e293b;
       --white: #fff;
+      --sticker-bg: #ffdd57; /* Sticker color */
+      --sticker-text: #1e293b;
     }
 
     * {
@@ -92,14 +95,35 @@
       margin-bottom: 20px;
     }
 
-    ul {
-      list-style-type: none;
-      margin-top: 10px;
-      font-size: 1.1rem;
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    .skill {
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .skill i {
+      font-size: 1.2rem;
+    }
+
+    .sticker {
+      background-color: var(--sticker-bg);
+      color: var(--sticker-text);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 15px;
     }
 
     .project {
@@ -167,17 +191,20 @@
     <div class="info">
       <h2>About Me</h2>
       <p>I'm an experienced Python/Django developer with a focus on creating scalable backend solutions and seamless API integrations. With a passion for clean code, performance optimization, and solving complex problems, I deliver high-quality applications tailored to meet business goals.</p>
+      <div class="sticker">Backend Solutions Expert</div>
     </div>
   </div>
 
   <section>
     <h3>Skills</h3>
-    <ul>
-      <li>Proficient in Python, Django, and Django REST Framework</li>
-      <li>Database Management (MySQL, PostgreSQL, SQLAlchemy)</li>
-      <li>API Design, Development & Integration</li>
-      <li>Cloud Services (AWS EC2, S3), Git, Docker</li>
-    </ul>
+    <div class="skills">
+      <div class="skill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill"><i class="fab fa-django"></i> Django</div>
+      <div class="skill"><i class="fab fa-github"></i> Git</div>
+      <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+      <div class="skill"><i class="fab fa-aws"></i> AWS</div>
+      <div class="skill"><i class="fas fa-database"></i> SQL</div>
+    </div>
   </section>
 
   <section>
