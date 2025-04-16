@@ -9,12 +9,11 @@
   <style>
     :root {
       --primary: #0f172a;
-      --accent: #6366f1;
+      --accent: #4f46e5;
       --bg: #f8fafc;
       --text: #1e293b;
       --white: #fff;
-      --sticker-bg: #ffdd57; /* Sticker color */
-      --sticker-text: #1e293b;
+      --light: #e2e8f0;
     }
 
     * {
@@ -27,123 +26,130 @@
       font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #6366f1, #3b82f6);
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
       color: var(--white);
+      padding: 60px 20px 80px;
       text-align: center;
-      padding: 60px 20px;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 600;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-top: 10px;
       font-weight: 400;
     }
 
+    .summary {
+      max-width: 800px;
+      background: var(--white);
+      margin: -50px auto 40px;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .summary p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
     .profile {
       display: flex;
+      align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
       background: var(--white);
-      margin-top: -30px;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     .profile img {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid var(--accent);
     }
 
-    .info {
-      margin-left: 20px;
-      max-width: 500px;
-    }
-
     .info h2 {
       color: var(--accent);
       font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
     .info p {
-      color: var(--text);
       font-size: 1rem;
       line-height: 1.6;
-      margin-top: 10px;
     }
 
     section {
-      padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     h3 {
-      color: var(--accent);
       font-size: 1.6rem;
+      color: var(--accent);
       margin-bottom: 20px;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 12px;
     }
 
     .skill {
       background-color: var(--accent);
       color: var(--white);
-      padding: 10px 20px;
+      padding: 8px 18px;
       border-radius: 30px;
       font-size: 1rem;
       display: flex;
       align-items: center;
-      gap: 5px;
-    }
-
-    .skill i {
-      font-size: 1.2rem;
-    }
-
-    .sticker {
-      background-color: var(--sticker-bg);
-      color: var(--sticker-text);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-top: 15px;
+      gap: 6px;
     }
 
     .project {
-      margin: 20px 0;
+      background: var(--white);
+      border-radius: 10px;
       padding: 20px;
-      background-color: var(--white);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
 
     .project h4 {
-      font-size: 1.3rem;
       color: var(--primary);
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
     }
 
     .project p {
-      font-size: 1.1rem;
-      color: var(--text);
-      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
     }
 
     .contact p {
@@ -152,14 +158,10 @@
     }
 
     footer {
-      text-align: center;
-      padding: 30px 20px;
       background: var(--primary);
       color: var(--white);
-    }
-
-    footer p {
-      font-size: 1rem;
+      padding: 25px 15px;
+      text-align: center;
     }
 
     footer a {
@@ -176,6 +178,10 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .profile img {
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
@@ -186,12 +192,15 @@
     <p>Python/Django Developer | Backend Solutions Specialist</p>
   </header>
 
+  <div class="summary">
+    <p>I’m a detail-oriented Python/Django developer with 2+ years of experience crafting scalable backend systems and RESTful APIs. I specialize in creating secure, maintainable applications that drive real business value. Whether it's building complex database models, optimizing queries, or integrating third-party APIs, I bring a problem-solving mindset and a passion for clean architecture.</p>
+  </div>
+
   <div class="profile">
     <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/0001.jpg" alt="Rohit Bijwe">
     <div class="info">
       <h2>About Me</h2>
-      <p>I'm an experienced Python/Django developer with a focus on creating scalable backend solutions and seamless API integrations. With a passion for clean code, performance optimization, and solving complex problems, I deliver high-quality applications tailored to meet business goals.</p>
-      <div class="sticker">Backend Solutions Expert</div>
+      <p>I love solving real-world problems with elegant backend solutions. My expertise lies in designing robust APIs, managing data efficiently, and optimizing performance to deliver reliable systems that scale with business needs.</p>
     </div>
   </div>
 
@@ -201,7 +210,6 @@
       <div class="skill"><i class="fab fa-python"></i> Python</div>
       <div class="skill"><i class="fab fa-django"></i> Django</div>
       <div class="skill"><i class="fab fa-github"></i> Git</div>
-      <div class="skill"><i class="fab fa-docker"></i> Docker</div>
       <div class="skill"><i class="fab fa-aws"></i> AWS</div>
       <div class="skill"><i class="fas fa-database"></i> SQL</div>
     </div>
@@ -214,13 +222,11 @@
       <p>Developed a secure, real-time bidding platform using RSA encryption to ensure safe transactions for users.</p>
       <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">View Project →</a>
     </div>
-
     <div class="project">
       <h4>Product Lead Management</h4>
       <p>Built a system for managing product leads with integrated reporting features for data-driven decision-making.</p>
       <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">View Project →</a>
     </div>
-
     <div class="project">
       <h4>E-commerce Cart System</h4>
       <p>Created a dynamic cart management system with Django signals, allowing personalized user cart functionality.</p>
