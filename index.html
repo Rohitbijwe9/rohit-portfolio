@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rohit | Python & Django Developer</title>
+  <title>Rohit Bijwe | Python/Django Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -20,157 +20,123 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(to right, #6366f1, #3b82f6);
+      background: linear-gradient(135deg, #6366f1, #3b82f6);
       color: var(--white);
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 600;
     }
 
     header p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: var(--white);
+      margin-top: -30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-inline: auto;
+      gap: 30px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+    }
+
+    .info h2 {
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+
+    .info p {
+      font-size: 1rem;
       margin-top: 10px;
     }
 
-    .profile-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      padding: 30px;
-      background: var(--white);
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    .profile-section img {
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
-      border: 5px solid var(--accent);
-      margin-right: 40px;
-      transition: transform 0.3s ease;
-    }
-
-    .profile-section img:hover {
-      transform: scale(1.1);
-    }
-
-    .profile-info {
-      max-width: 600px;
-    }
-
-    .profile-info h2 {
-      font-size: 2.2rem;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-
-    .profile-info p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
     section {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
-      animation: fadeIn 1s ease;
+      padding: 40px 20px;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    h3 {
       color: var(--accent);
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
-    }
-
-    p, li {
-      font-size: 1.05rem;
-      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
     }
 
     ul {
-      list-style: none;
+      list-style-type: none;
       padding: 0;
     }
 
-    li::before {
-      content: "✔️ ";
+    ul li::before {
+      content: "✔️";
+      margin-right: 8px;
       color: var(--accent);
     }
 
     .project {
-      background-color: var(--white);
+      background: var(--white);
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 25px;
-      transition: transform 0.3s;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
     }
 
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
+    .project h4 {
+      font-size: 1.2rem;
     }
 
     .project a {
+      display: inline-block;
+      margin-top: 8px;
       color: var(--accent);
       text-decoration: none;
-      font-weight: 600;
     }
 
-    .project a:hover {
-      text-decoration: underline;
+    .contact p {
+      margin: 10px 0;
     }
 
     footer {
+      text-align: center;
+      padding: 30px 20px;
       background-color: var(--primary);
       color: var(--white);
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 40px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .profile-section {
+      .profile {
         flex-direction: column;
         text-align: center;
       }
 
-      .profile-section img {
-        margin: 0 0 20px 0;
-      }
-
-      .profile-info h2 {
-        font-size: 1.8rem;
+      .info h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -179,62 +145,60 @@
 
   <header>
     <h1>Rohit Bijwe</h1>
-    <p>🚀 Python/Django Developer | REST API | Full-Stack Enthusiast</p>
+    <p>Python/Django Developer | Freelancer | API Expert</p>
   </header>
 
-  <div class="profile-section">
-    <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/0001.jpg" alt="Rohit Bijwe" class="profile-pic">
-    <div class="profile-info">
-      <h2>About Me</h2>
-      <p>I’m a dedicated Python & Django Developer with 2+ years of experience in crafting scalable web applications and RESTful APIs. From database design to frontend UI, I bring full-stack capabilities with a passion for clean, maintainable code and real-world problem solving.</p>
-      <p>I specialize in Django REST Framework, SQL databases, AWS (S3/EC2), and frontend tools like React.js. My approach combines technical precision with creativity and a drive for continuous improvement.</p>
+  <div class="profile">
+    <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/0001.jpg" alt="Rohit Bijwe">
+    <div class="info">
+      <h2>Hello 👋</h2>
+      <p>I’m Rohit, a freelance Python/Django developer with over 2 years of experience. I specialize in backend development, REST APIs, and full-stack solutions. Let’s build something awesome together.</p>
     </div>
   </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
+  <section>
+    <h3>Skills</h3>
     <ul>
-      <li>⚙️ Python, Django, Django REST Framework</li>
-      <li>🛢️ MySQL, PostgreSQL</li>
-      <li>🎨 React JS, HTML, CSS, Bootstrap</li>
-      <li>☁️ AWS S3, EC2, GitHub, Postman</li>
-      <li>📐 MVT Architecture, Clean Code, API Design</li>
+      <li>Python, Django, DRF</li>
+      <li>MySQL, PostgreSQL</li>
+      <li>HTML, CSS, React JS</li>
+      <li>AWS S3, EC2, Git, Postman</li>
     </ul>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+  <section>
+    <h3>Projects</h3>
 
     <div class="project">
-      <h3>🔐 Online Auction System with RSA</h3>
-      <p>A secure online auction platform using Django & RSA encryption for bid protection and real-time bidding.</p>
-      <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">View on GitHub</a>
+      <h4>Online Auction System with RSA</h4>
+      <p>Secure bidding platform with Django + RSA encryption.</p>
+      <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">GitHub →</a>
     </div>
 
     <div class="project">
-      <h3>📈 Product Lead Management System</h3>
-      <p>Manage leads, products, and generate reports. Built with Django REST API and MySQL backend.</p>
-      <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">View on GitHub</a>
+      <h4>Product Lead Management</h4>
+      <p>Lead & product management system with reports.</p>
+      <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">GitHub →</a>
     </div>
 
     <div class="project">
-      <h3>🛒 E-commerce Cart System</h3>
-      <p>One-cart-per-user logic, Django signals, full CRUD, and secure cart operations with quantity management.</p>
-      <a href="https://github.com/Rohitbijwe9" target="_blank">View on GitHub</a>
+      <h4>E-commerce Cart System</h4>
+      <p>Cart per user, Django signals, quantity update logic.</p>
+      <a href="https://github.com/Rohitbijwe9" target="_blank">GitHub →</a>
     </div>
-
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
-    <p>📞 Mobile: <a href="tel:+917066307511">7066307511</a></p>
-    <p>🐙 GitHub: <a href="https://github.com/Rohitbijwe9" target="_blank">github.com/Rohitbijwe9</a></p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/rohit-bijwe-913366324/" target="_blank">linkedin.com/in/rohit-bijwe</a></p>
+  <section class="contact">
+    <h3>Contact Me</h3>
+    <p>📧 <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
+    <p>📞 <a href="tel:+917066307511">+91 7066307511</a></p>
+    <p>💼 <a href="https://linkedin.com/in/rohit-bijwe-913366324/" target="_blank">LinkedIn</a></p>
+    <p>🐙 <a href="https://github.com/Rohitbijwe9" target="_blank">GitHub</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Rohit Bijwe</p>
+    <p>Looking for freelance gigs or full-time roles</p>
+    <p>© 2025 Rohit Bijwe </p>
   </footer>
 
 </body>
