@@ -15,6 +15,14 @@
       --white: #fff;
     }
 
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --primary: #f8fafc;
+      --white: #1e293b;
+      --accent: #8b5cf6;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -30,17 +38,27 @@
     }
 
     .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: var(--primary);
-  color: var(--white);        
-}
-
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      color: white;
+    }
 
     .navbar h1 {
       font-size: 1.8rem;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar nav a:hover {
+      text-decoration: underline;
     }
 
     section {
@@ -156,32 +174,48 @@
       text-decoration: none;
     }
 
-    .center {
-      text-align: center;
-      margin-top: 40px;
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
     }
 
-    .center h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .center h2 {
-      font-size: 1.6rem;
-      color: var(--accent);
+    @media (max-width: 600px) {
+      .skills {
+        flex-direction: column;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleTheme()">Switch Theme</button>
 
-  <div class="center">
+  <div class="navbar">
     <h1>Rohit Bijwe</h1>
-    <h2>Python/Django Developer</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
   </div>
 
   <section>
     <h3>About Me</h3>
-    <p>I’m Rohit, a Python/Django developer with over 2 years of experience in building secure, efficient, and scalable web applications. I specialize in backend development and have a strong passion for clean code.</p>
+    <p>I’m Rohit, a Python/Django developer with over 2 years of experience. I love crafting clean, efficient code and building robust backend systems that power dynamic web applications.</p>
+    <div class="badge-group">
+      <span class="skill">2+ Years Experience</span>
+    </div>
   </section>
 
   <section>
@@ -196,6 +230,10 @@
       <div class="skill">HTML</div>
       <div class="skill">CSS</div>
       <div class="skill">JavaScript</div>
+      <div class="skill">React JS</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">PostgreSQL</div>
+      <div class="skill">MySQL</div>
     </div>
   </section>
 
@@ -224,24 +262,31 @@
   </section>
 
   <section class="resume-download">
-    <a href="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/Rohit_bIjwe_Software_developer_cv.pdf.pdf" download>📄 Download Resume</a>
+    <a href="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/Rohit_bIjwe_Software_developer_cv.pdf.pdf" download target="_blank">📄 Download Resume</a>
   </section>
 
   <section class="contact">
     <h3>Contact</h3>
     <p><i class="fas fa-envelope"></i><a href="mailto:bijwerohit9@gmail.com"> bijwerohit9@gmail.com</a></p>
     <p><i class="fas fa-phone"></i><a href="tel:+917066307511"> +91 7066307511</a></p>
-    <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/rohitbijwe/">LinkedIn</a></p>
-    <p><i class="fab fa-github"></i><a href="https://github.com/Rohitbijwe9">GitHub</a></p>
+    <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/rohit-bijwe-913366324/" target="_blank"> LinkedIn Profile</a></p>
+    <p><i class="fab fa-github"></i><a href="https://github.com/Rohitbijwe9" target="_blank"> GitHub Projects</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Rohit Bijwe</p>
+    <p>© 2025 Rohit Bijwe | Python/Django Developer</p>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/in/rohitbijwe/"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/Rohitbijwe9"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/Rohitbijwe9" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/rohit-bijwe-913366324/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:bijwerohit9@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
 
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+    }
+  </script>
 </body>
 </html>
