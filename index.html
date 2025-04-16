@@ -1,80 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rohit | Python Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit | Python/Django Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
     header {
-      background: #2d2d2d;
-      color: white;
-      padding: 40px 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 60px 20px;
       text-align: center;
     }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
     section {
-      padding: 20px 40px;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
+
     h2 {
-      color: #2d2d2d;
+      color: #333;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
     }
-    .project {
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project, .skill {
       margin-bottom: 20px;
     }
+
+    .project a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
     footer {
+      background-color: #222;
+      color: #fff;
       text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 40px;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Rohit</h1>
-  <p>Python/Django Developer | REST API Specialist</p>
-</header>
+  <header>
+    <h1>Rohit Bijwe</h1>
+    <p>Python/Django Developer | REST API Specialist</p>
+  </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>I’m Rohit, a passionate Python/Django Developer with 2+ years of experience. I specialize in creating scalable web apps, RESTful APIs, and full-stack solutions using Django, React, and modern tools.</p>
-</section>
+  <section>
+    <h2>About Me</h2>
+    <p>I’m Rohit, a Python/Django Developer with 2+ years of experience building scalable, secure web applications and RESTful APIs. I focus on clean code, performance, and professional solutions that solve real-world problems.</p>
+  </section>
 
-<section>
-  <h2>Skills</h2>
-  <p>Python, Django, Django REST Framework, MySQL, PostgreSQL, React JS, HTML, CSS, JavaScript, GitHub, AWS</p>
-</section>
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li class="skill">Python, Django, Django REST Framework</li>
+      <li class="skill">MySQL, PostgreSQL</li>
+      <li class="skill">React JS, HTML, CSS, JavaScript, Bootstrap</li>
+      <li class="skill">AWS S3/EC2, GitHub, Postman</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Online Auction System (with RSA)</h3>
-    <p>Real-time bidding system with secure transactions using RSA encryption.</p>
-    <p><a href="#">View on GitHub</a></p>
-  </div>
-  <div class="project">
-    <h3>Product Lead Management</h3>
-    <p>CRUD app for product and lead management, built using Django REST API.</p>
-    <p><a href="#">View on GitHub</a></p>
-  </div>
-</section>
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <strong>Online Auction System with RSA</strong><br />
+      <small>Real-time secure bidding using Django & RSA encryption.</small><br />
+      <a href="https://github.com/Rohitbijwe9/auction-system">View on GitHub</a>
+    </div>
+    <div class="project">
+      <strong>Product Lead Management System</strong><br />
+      <small>Manage leads and products with full CRUD functionality using Django REST APIs.</small><br />
+      <a href="https://github.com/Rohitbijwe9/product-lead-management">View on GitHub</a>
+    </div>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: bijwerohit9@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/Rohitbijwe9">github.com/Rohitbijwe9</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-bijwe-913366324/">linkedin.com/in/Rohitbijwe</a></p>
-</section>
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Rohitbijwe9" target="_blank">github.com/Rohitbijwe9</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-bijwe-913366324/" target="_blank">linkedin.com/in/rohit-bijwe-913366324</a></p>
+  </section>
 
-<footer>
-  <p>© 2025 Rohit</p>
-</footer>
+  <footer>
+    <p>© 2025 Rohit Bijwe | Python/Django Developer</p>
+  </footer>
 
 </body>
 </html>
