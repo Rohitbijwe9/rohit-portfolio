@@ -9,165 +9,224 @@
   <style>
     :root {
       --primary: #0f172a;
-      --accent: #4f46e5;
+      --accent: #6366f1;
       --bg: #f8fafc;
       --text: #1e293b;
       --white: #fff;
-      --light: #e2e8f0;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --primary: #f8fafc;
+      --white: #1e293b;
+      --accent: #8b5cf6;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
-      color: var(--white);
-      padding: 60px 20px;
-      text-align: center;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #6366f1, #3b82f6);
+      color: white;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      font-weight: 400;
-    }
-
-    .summary {
-      max-width: 800px;
-      background: var(--white);
-      margin: -30px auto 40px;
-      padding: 30px 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .summary p {
-      font-size: 1.1rem;
-      line-height: 1.7;
+    .navbar h1 {
+      font-size: 1.8rem;
     }
 
     section {
+      padding: 40px 20px;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: auto;
     }
 
     h3 {
-      font-size: 1.6rem;
       color: var(--accent);
+      font-size: 1.6rem;
       margin-bottom: 20px;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 15px;
     }
 
     .skill {
       background-color: var(--accent);
       color: var(--white);
-      padding: 8px 18px;
+      padding: 10px 20px;
       border-radius: 30px;
       font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-weight: bold;
     }
 
     .project {
-      background: var(--white);
-      border-radius: 10px;
+      margin: 20px 0;
       padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
     }
 
     .project h4 {
-      color: var(--primary);
       font-size: 1.3rem;
-      margin-bottom: 8px;
+      color: var(--primary);
+      margin-bottom: 10px;
     }
 
     .project p {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 15px;
     }
 
     .project a {
       color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    .project a:hover {
-      text-decoration: underline;
-    }
-
-    .contact p {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      background: var(--primary);
-      color: var(--white);
-      padding: 25px 15px;
+    .resume-download {
       text-align: center;
+      margin-top: 30px;
     }
 
-    footer a {
-      color: var(--white);
+    .resume-download a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .resume-download a:hover {
+      background: #4f46e5;
+    }
+
+    .contact {
+      display: grid;
+      gap: 12px;
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    .contact p i {
+      margin-right: 10px;
+      color: var(--accent);
+    }
+
+    .contact p a {
+      color: var(--text);
       text-decoration: none;
     }
 
-    footer a:hover {
+    .contact p a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
       .skills {
         flex-direction: column;
-        align-items: center;
       }
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .center h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .center h2 {
+      font-size: 1.6rem;
+      color: var(--accent);
     }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleTheme()">Switch Theme</button>
 
-  <header>
+  <div class="center">
     <h1>Rohit Bijwe</h1>
-    <p>Python/Django Developer | Backend Solutions Specialist</p>
-  </header>
-
-  <div class="summary">
-    <p>I’m a detail-oriented Python/Django developer with over 2 years of experience crafting scalable backend systems and RESTful APIs. I specialize in creating secure, maintainable applications that drive real business value. Whether it's building complex database models, optimizing queries, or integrating third-party APIs, I bring a problem-solving mindset and a passion for clean architecture.</p>
+    <h2>Python/Django Developer</h2>
   </div>
+
+  <section>
+    <h3>About Me</h3>
+    <p>I’m Rohit, a Python/Django developer with over 2 years of experience in building secure, efficient, and scalable web applications. I specialize in backend development and have a strong passion for clean code.</p>
+  </section>
 
   <section>
     <h3>Skills</h3>
     <div class="skills">
-      <div class="skill"><i class="fab fa-python"></i> Python</div>
-      <div class="skill"><i class="fab fa-django"></i> Django</div>
-      <div class="skill"><i class="fab fa-github"></i> Git</div>
-      <div class="skill"><i class="fab fa-aws"></i> AWS</div>
-      <div class="skill"><i class="fas fa-database"></i> SQL</div>
+      <div class="skill">Python</div>
+      <div class="skill">Django</div>
+      <div class="skill">Django REST API</div>
+      <div class="skill">Git</div>
+      <div class="skill">AWS</div>
+      <div class="skill">SQL</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
     </div>
   </section>
 
@@ -175,22 +234,32 @@
     <h3>Highlighted Projects</h3>
     <div class="project">
       <h4>Online Auction System</h4>
-      <p>Developed a secure, real-time bidding platform using RSA encryption to ensure safe transactions for users.</p>
+      <p>Secure real-time bidding platform using RSA cryptography for encryption, real-time auction room, winner declaration logic, and transaction safety.</p>
       <a href="https://github.com/Rohitbijwe9/auction-system" target="_blank">View Project →</a>
     </div>
     <div class="project">
       <h4>Product Lead Management</h4>
-      <p>Built a system for managing product leads with integrated reporting features for data-driven decision-making.</p>
+      <p>Lead-based CRM dashboard supporting product-lead mapping, CRUD operations, PDF generation, and filter search—built with Django and Bootstrap UI.</p>
       <a href="https://github.com/Rohitbijwe9/product-lead-management" target="_blank">View Project →</a>
     </div>
     <div class="project">
       <h4>E-commerce Cart System</h4>
-      <p>Created a dynamic cart management system with Django signals, allowing personalized user cart functionality.</p>
-      <a href="https://github.com/Rohitbijwe9" target="_blank">View Project →</a>
+      <p>Back-end cart logic integrated with Django signals, one-to-one user-cart mapping, quantity handling, and dynamic subtotal updates.</p>
+      <a href="https://github.com/Rohitbijwe9/ecommerce-cart-system" target="_blank">View Project →</a>
+    </div>
+    <div class="project">
+      <h4>Pet & Aquarium Shop</h4>
+      <p>Custom-built web application managing pets, aquariums, and orders. Includes user authentication, admin panel, category filter, and mobile-first responsive design.</p>
+      <a href="https://github.com/Rohitbijwe9/pet-aquarium-shop" target="_blank">View Project →</a>
     </div>
   </section>
 
+  <section class="resume-download">
+    <a href="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/Rohit_bIjwe_Software_developer_cv.pdf" download>📄 Download Resume</a>
+  </section>
+
   <section class="contact">
-    <h3>Contact</
-::contentReference[oaicite:0]{index=0}
- 
+    <h3>Contact</h3>
+    <p><i class="fas fa-envelope"></i><a href="mailto:bijwerohit9@gmail.com"> bijwerohit9@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i><a href="tel:+917066307511"> +91 7066307511</a></p>
+    <p><i class="fab fa-linkedin"></i><a href="https://
