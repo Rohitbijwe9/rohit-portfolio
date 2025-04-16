@@ -44,6 +44,44 @@
       margin-top: 10px;
     }
 
+    .profile-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      padding: 30px;
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-section img {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      border: 5px solid var(--accent);
+      margin-right: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-section img:hover {
+      transform: scale(1.1);
+    }
+
+    .profile-info {
+      max-width: 600px;
+    }
+
+    .profile-info h2 {
+      font-size: 2.2rem;
+      color: var(--accent);
+    }
+
+    .profile-info p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
     section {
       max-width: 1000px;
       margin: auto;
@@ -87,15 +125,6 @@
       transform: translateY(-5px);
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       background-color: var(--primary);
       color: var(--white);
@@ -113,6 +142,19 @@
       header h1 {
         font-size: 2rem;
       }
+
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-section img {
+        margin-bottom: 20px;
+      }
+
+      .profile-info h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -120,13 +162,17 @@
 
   <header>
     <h1>Rohit Bijwe</h1>
-    <p>🚀 Python/Django Developer | REST API  | Full-Stack Enthusiast</p>
+    <p>🚀 Python/Django Developer | REST API | Full-Stack Enthusiast</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Rohit, a passionate and detail-oriented software developer with 2+ years of experience in building high-performance Django applications. I specialize in Python, Django REST Framework, and building full-stack apps with React. I believe in writing clean, scalable code that delivers business value and a seamless user experience.</p>
-  </section>
+  <div class="profile-section">
+    <img src="https://raw.githubusercontent.com/Rohitbijwe9/rohit-portfolio/main/rohit.jpg" alt="Rohit Bijwe" />
+    <div class="profile-info">
+      <h2>About Me</h2>
+      <p>I’m a passionate and experienced software developer with 2+ years of building scalable, secure web applications. Specializing in Python, Django, and full-stack web development, I focus on creating efficient APIs, clean architecture, and seamless user experiences.</p>
+      <p>With expertise in RESTful APIs, MySQL/PostgreSQL, and cloud services like AWS, I am dedicated to writing high-quality, maintainable code. When I’m not coding, I’m constantly learning new technologies and tackling challenging problems.</p>
+    </div>
+  </div>
 
   <section id="skills">
     <h2>Skills</h2>
